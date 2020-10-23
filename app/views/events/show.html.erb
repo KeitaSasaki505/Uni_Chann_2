@@ -1,0 +1,17 @@
+<div class="show">
+<h2><%= @event.project %></h2>
+  <%= @event.image %>
+  <%= @event.genre_id %>
+  <%= @event.overview %>
+  <%= @event.date %>
+  <%= @event.place%>
+  <% if user_signed_in? && current_user.id == @event.user.id %>
+      <%= link_to 'イベントの編集', edit_event_path, method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', event_path(@event.id), method: :delete, class:'item-destroy' %>
+    <% elsif user_signed_in? && ( current_user.id != @event.user.id ) && ( @event.join == nil ) %>
+      <%= link_to '参加登録する', item_orders_path(@item.id) ,class:"item-red-btn"%>
+    <% end %>
+</div>
+
+
