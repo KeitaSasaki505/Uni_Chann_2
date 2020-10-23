@@ -6,8 +6,8 @@
     <% if user_signed_in? %>
       <ul class="login">
         <li><%= link_to "Uni-Channとは", '#' %></li>
-        <%# <li><%= @current_user.image %>
-        <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
+        <li><%= link_to image_tag( current_user.image, class: "user-img" ), edit_user_registration_path %></li>
+        <%# <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       </ul>
       <% else %>
@@ -22,6 +22,7 @@
 </header>
 
 <body>
+<div class="event-list">
 <% @events.each do |event| %>
       <li class='list'>
         <%= link_to event_path(event.id) do %>
@@ -32,13 +33,17 @@
           <h3 class='item-name'>
             <%= event.project %>
           </h3>
+          <div>
+            <%= event.overview %>
+          </div>
           <div class='item-price'>
-            <span><%= event.date %></span>
+            <span>開催予定日：<%= event.date %></span>
           </div>
         </div>
         <% end %>
       </li>
-      <% end %>
+<% end %>
+</div>
 
 </body>
 

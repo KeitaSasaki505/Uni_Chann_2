@@ -4,7 +4,7 @@
 
 .header {
   width: 100vw;
-  height: 100vh;
+  height: 30vh;
 }
 
 .header-1 {
@@ -21,11 +21,36 @@
   padding-right: 30px;
 }
 
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
+.list {
+  list-style: none;
+  margin: 10px;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 50vh;
+  height: 33vh;
+}
+
+.user-img {
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+  background-color: rgba(248, 253, 171, 0.973);
+}
 
 .event-btn {
   width: 120px;
- 
+
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -35,7 +60,7 @@
 }
 
 .event-btn-text {
-  color: #fff;
+  color: #8292eef8;
   display: block;
   font-size: 18px;
   text-decoration: none;
@@ -55,4 +80,13 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.show {
+  list-style: none;
+}
+
+.show-img {
+  width: 480px;
+  height:320px;
 }
