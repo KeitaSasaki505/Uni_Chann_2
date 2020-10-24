@@ -8,7 +8,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.date :date, null: false
       t.string :email, null: false
       t.string :phone, null: false
-      t.string :place, null: false
+      t.string :address, null: false
       t.timestamps
     end
   end

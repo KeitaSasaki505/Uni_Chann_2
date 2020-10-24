@@ -36,8 +36,8 @@ class EventsController < ApplicationController
   end
 
   def update
-    @item.update(item_params)
-    if @item.save
+    @event.update(event_params)
+    if @event.save
       redirect_to root_path
     else
       render :edit
@@ -47,7 +47,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:image, :genre_id, :project, :overview, :date, :email, :phone, :place).merge(user_id: current_user.id)
+    params.require(:event).permit(:image, :genre_id, :project, :overview, :date, :email, :phone, :address ).merge(user_id: current_user.id)
   end
 
   def set_event
