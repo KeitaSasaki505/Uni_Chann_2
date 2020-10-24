@@ -1,7 +1,7 @@
 <div class="show">
 <h2><%= @event.project %></h2>
   <ul class="show">
-    <li><%= image_tag @event.image %></li>
+    <li><%= image_tag @event.image.variant(resize: '480x320') %></li>
     <li><%= @event.genre.name %></li>
     <li><%= @event.overview %></li>
     <li><%= @event.date %></li>

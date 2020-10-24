@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :joins
   end
   resources :users
+  resources :maps
 
 end
