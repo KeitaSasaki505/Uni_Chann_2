@@ -4,6 +4,7 @@ class JoinsController < ApplicationController
   end
 
   def create
+    @join = Join
   end
 
   def update

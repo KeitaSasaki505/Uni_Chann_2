@@ -66,7 +66,7 @@
 </script>
 
 <script async defer
-              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+              src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyD-IM1LwHyonzCwjjQ5NAQ8jOsPSnKGauY&callback=initMap">
 </script>
 
 <style type="text/css">
@@ -85,7 +85,7 @@
         <p class='or-text'>or</p>
         <%= link_to '削除', event_path(@event.id), method: :delete, class:'item-destroy' %>
       <% elsif user_signed_in? && ( current_user.id != @event.user_id ) %>
-        <%= link_to '参加登録する', event_joins_path(@event.id) ,class:"item-red-btn"%>
+        <%= link_to '参加登録する', new_event_join_path(@event.id) ,class:"item-red-btn"%>
       <% end %>
       </li>
   </ul>
