@@ -20,6 +20,13 @@
       </div>
 
       <div class="field">
+        <div>主催者</div>
+        <div>
+          <%= @event.user.nickname %>
+        </div>
+      </div>
+
+      <div class="field">
         <div>開催予定日時</div>
         <div>
           <%= @event.date %>
@@ -71,7 +78,7 @@
 
 <style type="text/css">
   #map { height: 320px;
-         width: 320px;}
+         width: 480px;}
 </style>
 
 <%# #mapの表示 %>

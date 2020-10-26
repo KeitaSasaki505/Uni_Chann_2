@@ -49,6 +49,13 @@ ActiveRecord::Schema.define(version: 2020_10_24_154630) do
   end
 
   create_table "joins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.string "name_kanji"
+    t.string "name_kana"
+    t.string "email"
+    t.string "phone"
+    t.text "message"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

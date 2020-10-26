@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :カナ入力%><br />
-    <%= f.text_field :namae_kana, placeholder:"フリガナ" %>
+    <%= f.text_field :name_kana, placeholder:"フリガナ" %>
   </div>
 
   <div class="field">
@@ -28,7 +28,12 @@
 
   <div class="field">
     <%= f.label :コメント %><br />
-    <%= f.text_area :option, rows: 3, placeholder:"(空欄でも可：何か要望がございましたらご記入ください)" %>
+    <%= f.text_area :message, rows: 3, placeholder:"(空欄でも可：何か要望がございましたらご記入ください)" %>
   </div>
+
+  <div class="field">
+    <%= f.submit "参加登録する" ,class:"" %>
+  </div>
+  
 
 <% end %>
