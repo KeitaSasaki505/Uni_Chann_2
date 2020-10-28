@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   
   root to: "events#index"
   resources :events do
-    resources :joins
+    resources :joins do
+      collection do
+        # デフォルト形式をcsvに設定
+        get :csv_download, defaults: { format: 'csv' }
+      end
+    end
   end
   resources :users
 

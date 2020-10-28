@@ -1,26 +1,23 @@
 <h2>イベント参加者一覧</h2>
-<table class="detail-table">
-  <% @join.each do |participants|%>
+
+<%= link_to "ファイルに出力する", event_joins_path(format: :csv), class: "btn-square" %>
+
+<table class="detail-table" border="1">
+<tr>
+  <th class="detail-item">名前</th>
+  <th class="detail-item">カナ</th>
+  <th class="detail-item">メールアドレス</th>
+  <th class="detail-item">電話番号</th>
+  <th class="detail-item">コメント</th>
+</tr>
+  <% @joins.each do |participants|%>
     <tbody>
       <tr>
-        <th class="detail-item">名前</th>
         <td class="detail-value"><%= participants.name_kanji %></td>
-      </tr>
-      <tr>
-        <th class="detail-item">カナ</th>
         <td class="detail-value"><%= participants.name_kana %></td>
-      </tr>
-      <tr>
-        <th class="detail-item">メール</th>
         <td class="detail-value"><%= participants.email %></td>
-      </tr>
-      <tr>
-        <th class="detail-item">電話</th>
         <td class="detail-value"><%= participants.phone %></td>
-      </tr>
-      <tr>
-        <th class="detail-item">コメント</th>
-        <td class="detail-value"><%= participants.message %></td>
+      　<td class="detail-value"><%= participants.message %></td>
       </tr>
     </tbody>
   <% end %>
