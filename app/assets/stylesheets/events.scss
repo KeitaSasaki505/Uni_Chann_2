@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+.field {
+  
+}
+
 .list {
   list-style: none;
   margin: 10px;
@@ -69,6 +73,7 @@
 
 .event-btn-icon {
   width: 60%;
+  height: 60%;
 }
 
 
@@ -89,4 +94,8 @@ footer p {
 .show-img {
   width: 480px;
   height:320px;
+}
+
+.join-list {
+  list-style: none;
 }
