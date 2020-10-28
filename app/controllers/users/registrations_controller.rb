@@ -11,7 +11,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   # def create
-  #   super
+  #   @user = User.new(user_params)
+  #   @user.image = "うに.png"
+  #   if @user.save
+  #     redirect_to root_path
+  #   end
   # end
 
   # GET /resource/edit

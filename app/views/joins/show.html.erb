@@ -1,0 +1,25 @@
+<h2>イベント参加者一覧</h2>
+<table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">名前</th>
+          <td class="detail-value"><%= @join.name_kanji %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">カナ</th>
+          <td class="detail-value"><%= @join.name_kana %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メール</th>
+          <td class="detail-value"><%= @join.email %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">電話</th>
+          <td class="detail-value"><%= @join.phone %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">コメント</th>
+          <td class="detail-value"><%= @join.message %></td>
+        </tr>
+      </tbody>
+    </table>
